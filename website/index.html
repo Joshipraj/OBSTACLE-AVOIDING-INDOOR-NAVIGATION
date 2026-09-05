@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB3 Wayfinder</title>
+<link rel="stylesheet" href="style.cs">
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header class="top">
+    <h1>AB3 Wayfinder</h1>
+    <span>indoor navigation</span>
+</header>
+
+<div class="here-card">
+    <div class="label">Your current tag</div>
+    <div class="place" id="hereName">—</div>
+    <button id="changeHere">Not here? Choose your tag</button>
+</div>
+
+<div id="pickHerePanel" style="display:none;" class="route-panel">
+    <h2 class="section">Which NFC tag did you tap?</h2>
+    <div class="dest-grid" id="hereGrid"></div>
+</div>
+
+<div id="destPanel">
+    <h2 class="section">Where would you like to go?</h2>
+    <div class="dest-grid" id="destGrid"></div>
+</div>
+
+<div id="routePanel" class="route-panel" style="display:none;" aria-live="polite">
+    <h2 class="section" id="routeTitle">Route</h2>
+    <div id="stepText"></div>
+
+    <div class="controls">
+        <button id="nextBtn">Next step</button>
+        <button id="backBtn" class="secondary">Back</button>
+        <button id="doneBtn" class="secondary">Choose new destination</button>
+    </div>
+
+    <div class="progress" id="progressText"></div>
+</div>
+
+<div class="map-wrap">
+    <h2 class="section">Floor map (for sighted assistance)</h2>
+    <svg id="mapSvg" viewBox="0 0 300 220"></svg>
+</div>
+
+<footer>
+    An NFC tag opens this page with a URL like
+    <code>?location=stairs1</code>, which sets
+    "Your current tag" automatically instead of requiring the picker above.
+    <br><br>
+    Distances shown are approximate, based on the floor plan layout, not GPS.
+    Turn directions assume you're facing further into the corridor from wherever you tapped.
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
