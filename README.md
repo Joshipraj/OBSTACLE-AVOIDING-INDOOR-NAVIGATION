@@ -40,7 +40,7 @@ When an NFC tag is tapped, the URL can automatically set the user's current loca
 
 The complete website can be accessed here:
 
-**[AB3 Wayfinder – Live Website](YOUR_GITHUB_PAGES_LINK_HERE)**
+**[AB3 Wayfinder – Live Website](https://joshipraj.github.io/OBSTACLE-AVOIDING-INDOOR-NAVIGATION/)**
 
 
 ## Navigation Locations
