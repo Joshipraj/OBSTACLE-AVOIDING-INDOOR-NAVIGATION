@@ -1,0 +1,240 @@
+:root{
+    --ink:#111417;
+    --paper:#f7f5f0;
+    --line:#d8d4ca;
+    --accent:#1d5c46;
+    --accent-soft:#e4efe9;
+    --focus:#0a58ff;
+    font-size:18px;
+}
+
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Iowan Old Style","Georgia","Times New Roman",serif;
+    line-height:1.45;
+}
+
+.wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:28px 20px 80px;
+}
+
+header.top{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    border-bottom:2px solid var(--ink);
+    padding-bottom:14px;
+    margin-bottom:22px;
+}
+
+header.top h1{
+    font-size:1.5rem;
+    margin:0;
+    font-weight:700;
+    letter-spacing:.2px;
+}
+
+header.top span{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:.85rem;
+    color:#5a5a52;
+}
+
+.here-card{
+    background:var(--accent);
+    color:#fff;
+    border-radius:4px;
+    padding:20px 22px;
+    margin-bottom:26px;
+}
+
+.here-card .label{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:.8rem;
+    opacity:.85;
+    margin-bottom:4px;
+}
+
+.here-card .place{
+    font-size:1.6rem;
+    font-weight:700;
+}
+
+.here-card button{
+    margin-top:14px;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    border:1px solid rgba(255,255,255,.5);
+    border-radius:6px;
+    padding:8px 14px;
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:.9rem;
+    cursor:pointer;
+}
+
+.here-card button:hover{
+    background:rgba(255,255,255,.25);
+}
+
+h2.section{
+    font-size:1.05rem;
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-weight:600;
+    margin:0 0 12px;
+}
+
+.dest-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-bottom:30px;
+}
+
+.dest-grid button{
+    text-align:left;
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    padding:16px;
+    font-size:1.02rem;
+    color:var(--ink);
+    cursor:pointer;
+    min-height:60px;
+}
+
+.dest-grid button:hover,
+.dest-grid button:focus{
+    border-color:var(--accent);
+    background:var(--accent-soft);
+}
+
+button:focus-visible,
+a:focus-visible{
+    outline:3px solid var(--focus);
+    outline-offset:2px;
+}
+
+.route-panel{
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    padding:22px;
+    margin-bottom:26px;
+}
+
+.route-panel h2{margin-top:0;}
+
+#stepText{
+    font-size:1.35rem;
+    margin:10px 0 18px;
+    min-height:2.6em;
+}
+
+.controls{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    font-family:-apple-system,"Segoe UI",sans-serif;
+}
+
+.controls button{
+    padding:12px 18px;
+    border-radius:6px;
+    border:1.5px solid var(--ink);
+    background:var(--ink);
+    color:#fff;
+    font-size:1rem;
+    cursor:pointer;
+}
+
+.controls button.secondary{
+    background:#fff;
+    color:var(--ink);
+}
+
+.controls button:disabled{
+    opacity:.4;
+    cursor:default;
+}
+
+.progress{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:.85rem;
+    color:#5a5a52;
+    margin-top:14px;
+}
+
+.map-wrap{
+    background:#fff;
+    border:1.5px solid var(--line);
+    border-radius:8px;
+    padding:14px;
+    margin-bottom:26px;
+}
+
+svg{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.edge{
+    stroke:#c9c4b6;
+    stroke-width:2;
+}
+
+.path-edge{
+    stroke:var(--accent);
+    stroke-width:4;
+}
+
+.node circle{
+    fill:#fff;
+    stroke:#8a8578;
+    stroke-width:1.5;
+}
+
+.node.dest circle{
+    fill:#fff;
+    stroke:var(--ink);
+}
+
+.node.current circle{
+    fill:var(--accent);
+    stroke:var(--accent);
+}
+
+.node.target circle{
+    fill:#b0432e;
+    stroke:#b0432e;
+}
+
+.node text{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:11px;
+    fill:#3a3a34;
+}
+
+footer{
+    font-family:-apple-system,"Segoe UI",sans-serif;
+    font-size:.8rem;
+    color:#7a7568;
+    margin-top:20px;
+}
+
+footer code{
+    background:#efece4;
+    padding:1px 5px;
+    border-radius:3px;
+}
+
+@media(max-width:480px){
+    .dest-grid{grid-template-columns:1fr;}
+}
